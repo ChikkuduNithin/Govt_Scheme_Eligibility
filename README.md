@@ -86,8 +86,8 @@ graph TB
     D -->|REST /api/v1| B
     B --> C
 
-    D <-->|WS /ws/hospital/{id} - server pushes alerts| B
-    A -.->|WS /ws/ambulance/{id} - re-route push, optional| B
+    D <-->|WS /ws/hospital/:id - server pushes alerts| B
+    A -.->|WS /ws/ambulance/:id - re-route push, optional| B
 ```
 
 **Key design points:**

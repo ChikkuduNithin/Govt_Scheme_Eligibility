@@ -77,18 +77,17 @@ graph TB
 
     subgraph Backend
         B[FastAPI Server<br/>:8000]
-        C[MongoDB<br/>emergency_routing]
         W[WebSocket Manager<br/>in-memory]
     end
 
+    C[(MongoDB<br/>emergency_routing)]
+
     A -->|REST /api/v1| B
     D -->|REST /api/v1| B
-    D -->|WS /ws/hospital/{id}| B
-    A -->|WS /ws/ambulance/{id}| B
     B --> C
-    B --> W
-    W --> D
-    W --> A
+
+    D <-->|WS /ws/hospital/{id} - server pushes alerts| B
+    A -.->|WS /ws/ambulance/{id} - re-route push, optional| B
 ```
 
 **Key design points:**

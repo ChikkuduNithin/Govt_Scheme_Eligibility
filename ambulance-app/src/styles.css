@@ -1,0 +1,249 @@
+:root {
+  --accent: #0b6ef3;
+  --accent-dark: #0953b8;
+  --bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --border: #d8dee5;
+  --text: #1a2433;
+  --muted: #5c6b7a;
+  --error: #b3261e;
+  --success: #1a7f37;
+  --green: #1a7f37;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.app {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  margin: 4px 0 2px;
+}
+
+.progress {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.field {
+  display: block;
+  margin: 0 0 14px;
+}
+
+.field > span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.radio-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-card.selected {
+  border-color: var(--accent);
+  background: #e8f1fe;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.radio-inline {
+  display: flex;
+  gap: 16px;
+}
+
+.radio-inline label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--error);
+  background: #fdecea;
+  border: 1px solid #f5c6c2;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+
+.success {
+  color: var(--success);
+  background: #e6f4ea;
+  border: 1px solid #b7e1c3;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin: 12px 0;
+}
+
+.loading {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.summary {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.hospital-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.eta {
+  margin: 4px 0 0;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.reasons {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.reasons li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
+
+.check {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.alternatives {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.alternatives summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.alternatives ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+}
+
+.alternatives li {
+  margin-bottom: 8px;
+}

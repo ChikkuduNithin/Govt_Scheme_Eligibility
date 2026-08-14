@@ -15,6 +15,9 @@ npm-debug.log*
 .env
 .env.local
 
+# MongoDB database dumps (share directly, not via git)
+emergency_routing_dump.json
+
 # OS
 .DS_Store
 Thumbs.db
